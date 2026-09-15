@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070707">
+<meta name="robots" content="noindex">
+<title>Publicações — Painel Maracanaú News</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body class="adm" data-page="adm-noticias">
+
+<div class="adm-shell">
+
+  <header class="adm-top">
+    <div class="wrap adm-top-in">
+      <div class="logo">
+        <span class="logo-ring"><span>MN</span></span>
+        <span class="logo-name"><b>Painel da redação</b><small>Maracanaú News</small></span>
+      </div>
+      <div class="topbar-actions">
+        <a class="icon-btn" href="../index.html" target="_blank" rel="noopener" aria-label="Abrir o site" data-icon="eye"></a>
+        <button class="icon-btn" id="sair" aria-label="Sair" data-icon="out"></button>
+      </div>
+    </div>
+  </header>
+
+  <nav class="adm-nav">
+    <a href="index.html" class="on">Publicações</a>
+    <a href="master.html">Parceiros e ajustes</a>
+    <a href="../index.html" target="_blank" rel="noopener">Ver o site</a>
+  </nav>
+
+  <main class="adm-main wrap">
+
+    <div class="adm-stats">
+      <div class="adm-stat"><b id="stTotal">0</b><span>no ar</span></div>
+      <div class="adm-stat"><b id="stRascunho">0</b><span>rascunhos</span></div>
+      <div class="adm-stat"><b id="stHoje">0</b><span>postadas hoje</span></div>
+      <div class="adm-stat"><b id="stParceiros">0</b><span>parceiros</span></div>
+    </div>
+
+    <form class="panel" id="formNoticia">
+      <div class="panel-head">
+        <h2 id="formTitulo">Nova publicação</h2>
+        <small>Salvo no navegador deste aparelho</small>
+      </div>
+
+      <div class="field">
+        <label for="titulo">Título</label>
+        <input type="text" id="titulo" placeholder="Ex.: Motorista passa mal e colide contra poste em Maracanaú">
+      </div>
+
+      <div class="field">
+        <label for="resumo">Resumo</label>
+        <input type="text" id="resumo" placeholder="Uma frase curta, a mesma que vai na legenda do post">
+      </div>
+
+      <div class="field">
+        <label>Categoria</label>
+        <div class="pick" id="pickCat"></div>
+      </div>
+
+      <div class="field">
+        <label>Arte da publicação</label>
+        <label class="drop" for="foto">
+          <span data-icon="image"></span>
+          Escolher imagem do celular
+          <small style="color:var(--mute-2);font-size:12px;">a mesma arte do Instagram, no formato dos posts</small>
+        </label>
+        <input type="file" id="foto" accept="image/*" hidden>
+        <div class="preview" id="preview" style="display:none;"></div>
+        <input type="url" id="fotoUrl" placeholder="ou cole o link de uma imagem" style="margin-top:10px;">
+      </div>
+
+      <div class="field-2">
+        <div class="field">
+          <label for="autor">Assinatura</label>
+          <input type="text" id="autor" placeholder="Redação Maracanaú News">
+        </div>
+        <div class="field">
+          <label for="data">Data</label>
+          <input type="date" id="data">
+          <div class="hint"><button type="button" id="hoje" style="color:var(--white);font-weight:600;text-decoration:underline;">usar a data de hoje</button></div>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="corpo">Texto da notícia</label>
+        <textarea id="corpo" placeholder="Escreva normalmente.&#10;&#10;Deixe uma linha em branco para separar parágrafos.&#10;&#10;## Assim vira um subtítulo&#10;&#10;> Assim vira uma citação em destaque"></textarea>
+        <div class="hint">Linha em branco separa parágrafos. Comece com <b>##</b> para subtítulo e <b>&gt;</b> para citação.</div>
+      </div>
+
+      <div class="adm-bar">
+        <button type="button" class="btn btn-red" id="btnPublicar"><span data-icon="check"></span> Publicar</button>
+        <button type="button" class="btn btn-ghost" id="btnRascunho">Salvar rascunho</button>
+        <button type="button" class="btn btn-ghost" id="btnCancelar" style="display:none;">Cancelar edição</button>
+      </div>
+    </form>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Publicações</h2>
+        <small>toque para editar, ver ou excluir</small>
+      </div>
+      <div id="admLista"></div>
+    </section>
+
+  </main>
+</div>
+
+<script src="../script.js"></script>
+</body>
+</html>
