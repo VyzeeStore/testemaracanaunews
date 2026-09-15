@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070707">
+<title>Notícia — Maracanaú News</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="home">
+
+<header class="topbar">
+  <div class="wrap topbar-in">
+    <a href="index.html" class="logo">
+      <span class="logo-ring"><span>MN</span></span>
+      <span class="logo-name">
+        <b>Maracanaú News<i class="verified" data-icon="verified"></i></b>
+        <small data-txt="bio"></small>
+      </span>
+    </a>
+    <nav class="nav-desk">
+      <a href="index.html">Início</a>
+      <a href="index.html#feed" class="on">Notícias</a>
+      <a href="parceiros.html">Parceiros</a>
+      <a href="index.html#anuncie">Anuncie</a>
+    </nav>
+    <div class="topbar-actions">
+      <button class="icon-btn" data-open-search aria-label="Buscar" data-icon="search"></button>
+      <button class="icon-btn menu-btn" id="menuBtn" aria-label="Abrir menu" data-icon="menu"></button>
+    </div>
+  </div>
+</header>
+
+<main id="noticia" class="wrap article-top">
+  <a class="back" href="index.html"><span data-icon="back"></span> Voltar</a>
+
+  <div class="article-grid">
+    <article>
+      <span class="tag" id="nTag"></span>
+      <h1 id="nTitulo"></h1>
+      <p class="lede" id="nResumo"></p>
+
+      <div class="byline">
+        <span id="nAutor"></span>
+        <i class="dot" style="width:3px;height:3px;border-radius:50%;background:currentColor;"></i>
+        <span id="nData"></span>
+      </div>
+
+      <div class="cover" id="nCover"></div>
+
+      <div class="prose" id="nCorpo"></div>
+
+      <div class="share-bar">
+        <button class="btn btn-primary" id="btnShare"><span data-icon="share"></span> Compartilhar</button>
+        <a class="btn btn-whats" id="btnWhats" target="_blank" rel="noopener"><span data-icon="whats"></span> WhatsApp</a>
+        <button class="btn btn-ghost" id="btnCopy"><span data-icon="copy"></span> Copiar link</button>
+      </div>
+
+      <div class="related">
+        <h3>Leia também</h3>
+        <div id="nRelacionadas"></div>
+      </div>
+    </article>
+
+    <aside>
+      <div class="join" style="padding:20px 18px;">
+        <h2 style="font-size:19px;">Notícia em primeira mão</h2>
+        <p>Entre no grupo do WhatsApp e receba os alertas da cidade.</p>
+        <a class="btn btn-whats btn-block" data-link="whats-grupo" target="_blank" rel="noopener"><span data-icon="whats"></span> Entrar no grupo</a>
+      </div>
+      <div class="ad" style="margin-top:16px;padding:20px 18px;">
+        <span class="tag">Oportunidade</span>
+        <h2 style="font-size:19px;">Anuncie aqui</h2>
+        <p>Sua empresa vista por quem acompanha Maracanaú todo dia.</p>
+        <a class="btn btn-red btn-block" style="margin-top:14px;" data-link="whats-direto" target="_blank" rel="noopener"><span data-icon="whats"></span> Falar com o comercial</a>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot-grid">
+    <div>
+      <div class="logo">
+        <span class="logo-ring"><span>MN</span></span>
+        <span class="logo-name"><b>Maracanaú News</b><small data-txt="handle"></small></span>
+      </div>
+      <div class="socials">
+        <a data-link="instagram" target="_blank" rel="noopener" aria-label="Instagram" data-icon="insta"></a>
+        <a data-link="whats-canal" target="_blank" rel="noopener" aria-label="Canal" data-icon="whats"></a>
+        <a data-link="keepo" target="_blank" rel="noopener" aria-label="Links" data-icon="link"></a>
+        <a data-link="email" aria-label="E-mail" data-icon="mail"></a>
+      </div>
+    </div>
+    <div>
+      <h4>Navegar</h4>
+      <a class="fl" href="index.html">Início</a>
+      <a class="fl" href="index.html#feed">Últimas notícias</a>
+      <a class="fl" href="parceiros.html">Parceiros</a>
+    </div>
+    <div>
+      <h4>Falar com a redação</h4>
+      <a class="fl" data-link="whats-direto" target="_blank" rel="noopener">WhatsApp da redação</a>
+      <a class="fl" data-link="email">E-mail para parcerias</a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    © <span data-txt="ano"></span> Maracanaú News. Não somos página policial.
+  </div>
+</footer>
+
+<div class="drawer" id="drawer">
+  <div class="drawer-bg" id="drawerBg"></div>
+  <nav class="drawer-panel">
+    <div class="drawer-head">
+      <div class="logo"><span class="logo-ring"><span>MN</span></span><span class="logo-name"><b>Maracanaú News</b><small data-txt="handle"></small></span></div>
+      <button class="icon-btn" id="drawerClose" aria-label="Fechar menu" data-icon="close"></button>
+    </div>
+    <a class="dl" href="index.html"><span data-icon="home"></span> Início</a>
+    <a class="dl" href="index.html#feed"><span data-icon="news"></span> Últimas notícias</a>
+    <a class="dl" href="#" data-open-search><span data-icon="search"></span> Buscar</a>
+    <a class="dl" href="parceiros.html"><span data-icon="shop"></span> Parceiros</a>
+    <a class="dl" href="index.html#anuncie"><span data-icon="check"></span> Anuncie aqui</a>
+    <div class="drawer-sep"></div>
+    <a class="dl" data-link="whats-grupo" target="_blank" rel="noopener"><span data-icon="whats"></span> Grupo do WhatsApp</a>
+    <a class="dl" data-link="instagram" target="_blank" rel="noopener"><span data-icon="insta"></span> Instagram</a>
+  </nav>
+</div>
+
+<div class="search-layer" id="searchLayer">
+  <div class="search-top">
+    <label class="search-field">
+      <span data-icon="search"></span>
+      <input id="searchInput" type="search" placeholder="Buscar notícia, bairro ou empresa" autocomplete="off">
+    </label>
+    <button class="icon-btn" id="searchClose" aria-label="Fechar busca" data-icon="close"></button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<nav class="tabbar">
+  <a href="index.html" data-tab="home"><span data-icon="home"></span>Início</a>
+  <button data-open-search><span data-icon="search"></span>Buscar</button>
+  <a href="parceiros.html" data-tab="parceiros"><span data-icon="shop"></span>Parceiros</a>
+  <a class="whats" data-link="whats-grupo" target="_blank" rel="noopener"><span data-icon="whats"></span>Grupo</a>
+</nav>
+
+<script src="script.js"></script>
+</body>
+</html>
